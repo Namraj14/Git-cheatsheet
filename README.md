@@ -1,17 +1,35 @@
 # 🧠 Git & GitHub Commands Cheat Sheet
 
--git init
--git add README.md
--git commit -m "first commit"
--git branch -M main
--git remote add origin https://github.com/Namraj14/Namraj14.git
--git push -u origin main
+### How to Create a New Git Repository and Push to GitHub
+
+```bash
+# Initialize a new Git repository
+git init
+
+# Add the README.md file to staging
+git add README.md
+
+# Commit the changes with a message
+git commit -m "first commit"
+
+# Rename the default branch to 'main'
+git branch -M main
+
+# Add the remote GitHub repository URL
+git remote add origin https://github.com/Namraj14/Namraj14.git
+
+# Push the local 'main' branch to the remote repository and set upstream
+git push -u origin main
 
 
----
--git remote add origin https://github.com/Namraj14/Namraj14.git
--git branch -M main
--git push -u origin main
+# Add the remote repository (if not already added)
+git remote add origin https://github.com/Namraj14/Namraj14.git
+
+# Rename the current branch to 'main'
+git branch -M main
+
+# Push the 'main' branch to GitHub and track it
+git push -u origin main
 
 ---
 A simple and structured guide to essential Git and GitHub commands.
