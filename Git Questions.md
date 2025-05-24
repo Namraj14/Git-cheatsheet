@@ -28,8 +28,80 @@
 **Answer:**  
 git checkout -b new-branch
 
-7. What is the difference between git merge and git rebase?
-Answer: Merge combines branches preserving history; rebase rewrites history for a linear sequence.
+### 7. What is the difference between `git merge` and `git rebase`?
+
+- **git merge**  
+  - Combines the changes from one branch into another.  
+  - Preserves the full history of both branches, creating a *merge commit*.  
+  - History shows the true branching structure with all commits intact.  
+  - Example:  
+    ```
+    git checkout main
+    git merge feature-branch
+    ```
+  - Useful when you want to keep a record of the feature branch’s separate history.
+
+- **git rebase**  
+  - Moves or reapplies your commits on top of another base commit (usually main branch).  
+  - Rewrites history to create a linear, cleaner sequence of commits.  
+  - Avoids merge commits, making history look like a straight line.  
+  - Example:  
+    ```
+    git checkout feature-branch
+    git rebase main
+    ```
+  - Useful for a clean, linear project history but **do not rebase shared branches** as it rewrites history.
+
+---
+### Difference Between git merge and git rebase
+
+- **git merge**  
+  Combines two branches by creating a new "merge commit."  
+  Keeps all history and shows that branches happened.  
+  Safe to use when working with others.
+
+- **git rebase**  
+  Moves your branch's commits on top of another branch.  
+  Makes history look like one straight line (no merge commits).  
+  Good for cleaning up your work before sharing, but don't rebase shared branches.
+
+---
+
+**Example:**  
+```bash
+# Merge example
+git checkout main
+git merge feature-branch
+
+# Rebase example
+git checkout feature-branch
+git rebase main
+
+### What does "keeps history" and "makes history" mean in Git?
+
+- **Keeps history**  
+  This means Git saves all the past changes and shows exactly when and how branches split and came back together.  
+  You can see the full timeline of what happened in your project.  
+  Example: When you use **git merge**, Git adds a special “merge commit” that connects the histories, so nothing is lost.
+
+- **Makes history** (or rewrites history)  
+  This means Git changes the recorded order of commits to make it look like changes happened in a straight line, without branches.  
+  It can make the history easier to read but changes the commit record.  
+  Example: When you use **git rebase**, Git takes your commits and re-applies them on top of another branch, creating new commit records with new IDs.
+
+---
+
+### Simple analogy:
+
+- **Keeps history** is like saving every step you took on a map, showing every turn and detour.  
+- **Makes history** is like drawing a straight line from start to finish, ignoring the detours to make it look simple.
+
+
+
+**Summary:**  
+- Merge **preserves** history with merge commits; rebase **rewrites** history for a linear flow.  
+- Merge is safer for shared branches; rebase is good for cleaning up your local commits before merging.
+
 
 8. When would you use git stash?
 Answer: To temporarily save unfinished changes without committing them.
