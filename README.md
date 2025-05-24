@@ -170,6 +170,19 @@ This markdown explains the use of common `git push` commands like `--set-upstrea
 
 ---
 
+### 3. `git branch -M main`
+
+📌 **What it does:**
+
+- Renames your current branch to `main`.
+- `-M` means **force rename**, even if the `main` branch already exists.
+
+🗣️ *“Change the name of my current branch to `main`, even if there was a branch called `main` already.”*
+
+📘 This is useful if you started with `master` but want to switch to the modern default name `main`.
+
+---
+
 ## 💡 What's the Difference?
 
 | Command                            | Meaning                                                                 |
