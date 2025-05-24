@@ -1,9 +1,19 @@
 # 🧠 Git & GitHub Commands Cheat Sheet
 
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Namraj14/Namraj14.git
+git push -u origin main
 A simple and structured guide to essential Git and GitHub commands.
 
 ---
+git remote add origin https://github.com/Namraj14/Namraj14.git
+git branch -M main
+git push -u origin main
 
+---
 ## 🔧 Git Setup
 
 - Set your username:
