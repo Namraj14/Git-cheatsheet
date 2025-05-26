@@ -248,6 +248,6 @@ Answer: Large File Storage to manage big files (like videos) with Git.
 Answer:
 git checkout --orphan new-branch
 
-51. How do you fix “detached HEAD” state?
+50. How do you fix “detached HEAD” state?
 Answer: Checkout a branch:
 git checkout branch-name
