@@ -322,3 +322,45 @@ git merge origin/main  # Merge manually when ready
 
 ```bash
 git pull origin main
+
+
+# Explanation of `git push -u origin master:main`
+
+## Command Breakdown
+
+- `git push`  
+  Pushes (uploads) your local commits to a remote repository.
+
+- `-u` or `--set-upstream`  
+  Sets the remote branch as the default upstream for your local branch.  
+  This means future `git push` and `git pull` commands can be used without specifying the remote or branch.
+
+- `origin`  
+  The name of the remote repository. By default, `origin` refers to the GitHub (or other Git host) repository you cloned from.
+
+- `master:main`  
+  This means **push your local branch `master` to the remote branch `main`**.  
+  The syntax is `local_branch:remote_branch`.
+
+---
+
+## What this command does
+
+- Pushes your **local `master` branch** commits to the **remote `main` branch** on `origin`.
+- Sets `origin/main` as the upstream branch for your local `master` branch.
+- After this, you can just use `git push` or `git pull` without specifying branch names when on `master`.
+
+---
+
+## Why use this?
+
+- Your local branch is named `master`, but the remote’s main branch is called `main`.
+- You want to push your local work on `master` into the remote branch `main`.
+- You want to link your local `master` branch to track the remote `main` branch for easier syncing later.
+
+---
+
+## Example usage
+
+```bash
+git push -u origin master:main
