@@ -251,3 +251,74 @@ git checkout --orphan new-branch
 50. How do you fix “detached HEAD” state?
 Answer: Checkout a branch:
 git checkout branch-name
+
+
+# Git Fetch vs Git Pull
+
+## What is `git fetch`?
+
+- Downloads new commits and updates from the remote repository.
+- Does **NOT** change your local files or branches.
+- Updates your remote tracking branches (e.g., `origin/main`).
+- Allows you to review changes before integrating them.
+
+### Analogy
+Fetching is like checking the library for new pages of a book and bringing them home — but **not gluing them in** yet.
+
+---
+
+## What is `git pull`?
+
+- Performs `git fetch` **and** automatically merges the changes into your current branch.
+- Updates your local branch and files immediately.
+- Can cause merge conflicts if changes conflict with your local work.
+
+### Analogy
+Pulling is like fetching new pages from the library **and immediately gluing them into your book** at home.
+
+---
+
+## When to Use `git fetch`
+
+- When you want to **see what’s new on the remote** without changing your current work.
+- When you want to **review and test** before merging.
+- When you want **safer, controlled updates**.
+
+**Example:**
+
+```bash
+git fetch origin
+git log origin/main    # Review new commits
+git merge origin/main  # Merge manually when ready
+
+# When to Use `git pull`
+
+`git pull` is a Git command that fetches changes from a remote repository and immediately merges them into your current local branch.
+
+---
+
+## When Should You Use `git pull`?
+
+- **You want to quickly update your local branch with the latest changes from the remote.**  
+  Ideal if you’re about to start work and want to ensure your branch is current.
+
+- **You prefer a one-step command to sync your branch.**  
+  Instead of fetching and merging separately, `git pull` does both at once.
+
+- **You are comfortable resolving merge conflicts immediately if they arise.**  
+  Since `git pull` merges automatically, any conflicts will need prompt attention.
+
+- **You are working in a small team or solo and want simplicity.**
+
+---
+
+## When Not to Use `git pull`
+
+- If you want to **review changes before merging** or are working on complex or critical code, it’s safer to `git fetch` first and merge manually.
+
+---
+
+## Example
+
+```bash
+git pull origin main
