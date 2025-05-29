@@ -34,7 +34,8 @@ git push -u origin main
 or
 
 # Your local branch is master and u want to push in the main in remote branch
-git pull --rebase origin main
+git pull --rebase origin main and  
+git push -u origin master:main
 ---
 A simple and structured guide to essential Git and GitHub commands.
 
