@@ -13,7 +13,7 @@ git add README.md
 git commit -m "first commit"
 
 # Rename the default branch to 'main'
-git branch -M main
+git branch -M main or it branch -m master main (renaming from master to main)
 
 # Add the remote GitHub repository URL
 git remote add origin https://github.com/Namraj14/Namraj14.git
