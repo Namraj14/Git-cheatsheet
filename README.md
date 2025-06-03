@@ -244,4 +244,4 @@ Rebase moves your local changes on top of the latest remote changes — like rea
 
 Example:
 ```bash
-git pull --rebase origin main
+git pull --rebase origin main or git pull origin main --rebase (Brings in the remote main branch (from GitHub), and re-applies your local changes on top to prevent conflicts.)
