@@ -13,7 +13,7 @@ git add README.md
 git commit -m "first commit"
 
 # Rename the default branch to 'main'
-git branch -M main or it branch -m master main (renaming from master to main)
+git branch -M main or git branch -m master main (renaming from master to main)
 
 # Add the remote GitHub repository URL
 git remote add origin https://github.com/Namraj14/Namraj14.git
@@ -24,9 +24,6 @@ git push -u origin main
 
 # Add the remote repository (if not already added)
 git remote add origin https://github.com/Namraj14/Namraj14.git
-
-# Rename the current branch to 'main'
-git branch -M main
 
 # Push the 'main' branch to GitHub and track it
 git push -u origin main
